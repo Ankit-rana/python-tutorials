@@ -18,7 +18,7 @@ view("linux64")
 
 # 2. above syntax creates problem while debugging like
 
-print(view.__name__)
+print(view.__name__) # wrapper
 
 # To solve that, always use functools.wraps decorator
 from functools import  wraps
@@ -37,4 +37,4 @@ def view(environ):
     print("buisness logic in %s " % environ)
 
 view("linux64")
-print(view.__name__)
+print(view.__name__) # view
